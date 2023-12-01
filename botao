@@ -1,0 +1,32 @@
+// src/components/MeuComponente.js
+import React, { useState } from 'react';
+
+function MeuComponente() {
+  const [contador, setContador] = useState(0);
+
+  const aumentarContador = () => {
+    setContador(contador + 1);
+  };
+
+  return (
+    <div>
+      <h1>Contador: {contador}</h1>
+      <button onClick={aumentarContador}>Aumentar Contador</button>
+    </div>
+  );
+}
+
+export default MeuComponente;
+// src/App.js
+import React from 'react';
+import MeuComponente from './components/MeuComponente';
+
+function App() {
+  return (
+    <div className="App">
+      <MeuComponente />
+    </div>
+  );
+}
+
+export default App;
